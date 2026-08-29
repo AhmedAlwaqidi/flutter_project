@@ -7,8 +7,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home')),
-      body: Column(children: [Text('This is my perfect Button'), Button()]),
+      appBar: AppBar(
+        title: Row(
+          children: [Icon(Icons.home), SizedBox(width: 12), Text('Home')],
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('This is my perfect Button'),
+            SizedBox(height: 22),
+            Button(),
+          ],
+        ),
+      ),
     );
   }
 }
