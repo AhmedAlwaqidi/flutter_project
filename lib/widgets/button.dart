@@ -8,7 +8,7 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,
+      onPressed: onPressed ?? () => {},
       child: child ?? Text('Clickable Button'),
     );
   }
